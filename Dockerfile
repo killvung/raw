@@ -6,7 +6,7 @@ COPY package*.json ./
 
 RUN npm install --only=development
 
-RUN npm i -g rimraf
+RUN npm i -g @nestjs/cli
 
 COPY . .
 
