@@ -1,0 +1,14 @@
+Setup configuration for MongoDB, Strava and MapMyFitness 
+https://docs.nestjs.com/techniques/configuration
+- Learn how to load configuration thru .env file and thru env variable in Divio
+
+Setup MongoDB connection
+https://docs.nestjs.com/techniques/mongodb
+
+Call Route data from MapMyFitness
+
+Upsert Route data to MongoDB MapMyFitness collection
+
+Call Activity data from Strava
+
+Upsert Activity data to Strava collection
