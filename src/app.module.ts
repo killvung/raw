@@ -6,10 +6,10 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
 import { StravaModule } from './strava/strava.module';
-import { MapMyFitnessModule } from './mapmyfitness/mapmyfitness.module';
+import { UnderArmourModule } from './underarmour/underarmour.module';
 
 @Module({
-  imports: [StravaModule, MapMyFitnessModule, ConfigModule.forRoot({
+  imports: [StravaModule, UnderArmourModule, ConfigModule.forRoot({
     isGlobal: true,
     ignoreEnvFile: process.env['APP__APP_ENV'] === "prod"
   }),

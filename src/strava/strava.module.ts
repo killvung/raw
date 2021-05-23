@@ -14,9 +14,5 @@ import { Activity, ActivitySchema } from './schemas/activity.schema';
     providers: [StravaService],
 })
 export class StravaModule {
-    constructor(private configService: ConfigService) {
-        Logger.log(`APP__APP_ENV: ${configService.get("APP__APP_ENV")}`)
-        Logger.log(`FOO: ${configService.get("FOO")}`)
-        Logger.log(`STAGE: ${configService.get("STAGE")}`)
-    }
+    constructor(private configService: ConfigService) { }
 }
