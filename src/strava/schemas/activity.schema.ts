@@ -6,9 +6,6 @@ export type ActivityDocument = Activity & Document;
 @Schema({
     strict: false
 })
-export class Activity {
-    @Prop()
-    id: number
-}
+export class Activity {}
 
 export const ActivitySchema = SchemaFactory.createForClass(Activity);

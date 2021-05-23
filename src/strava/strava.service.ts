@@ -1,6 +1,6 @@
 import { Model } from 'mongoose';
 import { BulkWriteOpResultObject } from 'mongodb';
-import { Injectable, Logger } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Activity, ActivityDocument } from './schemas/activity.schema';
 import { ConfigService } from '@nestjs/config';
