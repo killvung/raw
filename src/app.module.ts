@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
-import { ConfigModule } from '@nestjs/config';
+import { ConfigModule, ConfigService } from '@nestjs/config';
+import { MongooseModule } from '@nestjs/mongoose';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
@@ -11,7 +12,17 @@ import { MapMyFitnessModule } from './mapmyfitness/mapmyfitness.module';
   imports: [StravaModule, MapMyFitnessModule, ConfigModule.forRoot({
     isGlobal: true,
     ignoreEnvFile: process.env['APP__APP_ENV'] === "prod"
-  })],
+  }),
+    MongooseModule.forRootAsync({
+      imports: [ConfigModule],
+      useFactory: async (config: ConfigService) => ({
+        uri: config.get('APP__MONGODB_URL'),
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+      }),
+      inject: [ConfigService],
+    })
+  ],
   controllers: [AppController],
   providers: [AppService],
 })

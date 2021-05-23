@@ -24,11 +24,14 @@
     "@nestjs/common": "^7.6.15",
     "@nestjs/config": "^0.6.3",
     "@nestjs/core": "^7.6.15",
+    "@nestjs/mongoose": "^7.2.4",
     "@nestjs/platform-express": "^7.6.15",
     "ansi-styles": "^4.3.0",
     "axios": "^0.21.1",
+    "mongoose": "^5.12.10",
     "reflect-metadata": "^0.1.13",
-    "rxjs": "^6.6.6"
+    "rxjs": "^6.6.6",
+    "strava_api_v3": "file:generated/javascript"
   },
   "devDependencies": {
     "@nestjs/cli": "^7.6.0",
