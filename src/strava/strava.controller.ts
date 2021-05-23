@@ -15,7 +15,9 @@ export class StravaController {
     syncStravaActivities(@Res() res: Response) {
         return this.stravaService.getStravaActivities(async (error, activities) => {
             if (error) {
-                Logger.error(error)
+                if (error.status === 401) {
+                    res.status(HttpStatus.UNAUTHORIZED).send('Unauthorized');
+                }
             } else {
                 const { upsertedCount, modifiedCount } =
                     await this.stravaService.upsertStravaActivities(activities);

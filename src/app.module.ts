@@ -16,10 +16,21 @@ import { UnderArmourModule } from './underarmour/underarmour.module';
     MongooseModule.forRootAsync({
       imports: [ConfigModule],
       useFactory: async (config: ConfigService) => ({
-        uri: config.get('APP__MONGODB_URL'),
+        uri: config.get('APP__MONGODB_URL_UA'),
         useNewUrlParser: true,
-        useUnifiedTopology: true,
+        useUnifiedTopology: true
       }),
+      connectionName: "underArmour",
+      inject: [ConfigService],
+    }),
+    MongooseModule.forRootAsync({
+      imports: [ConfigModule],
+      useFactory: async (config: ConfigService) => ({
+        uri: config.get('APP__MONGODB_URL_STRAVA'),
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+      }),
+      connectionName: "strava",
       inject: [ConfigService],
     })
   ],

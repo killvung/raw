@@ -9,7 +9,7 @@ import { Route, RouteSchema } from './schemas/route.schema';
 import { Workout, WorkoutSchema } from './schemas/workout.schema';
 
 @Module({
-    imports: [MongooseModule.forFeature([{ name: Route.name, schema: RouteSchema }, { name: Workout.name, schema: WorkoutSchema }])],
+    imports: [MongooseModule.forFeature([{ name: Route.name, schema: RouteSchema }, { name: Workout.name, schema: WorkoutSchema }], 'underArmour')],
     controllers: [UnderArmourController],
     providers: [UnderArmourService],
 })

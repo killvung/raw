@@ -9,7 +9,7 @@ import { StravaService } from './strava.service';
 import { Activity, ActivitySchema } from './schemas/activity.schema';
 
 @Module({
-    imports: [MongooseModule.forFeature([{ name: Activity.name, schema: ActivitySchema }])],
+    imports: [MongooseModule.forFeature([{ name: Activity.name, schema: ActivitySchema }], 'strava')],
     controllers: [StravaController],
     providers: [StravaService],
 })
