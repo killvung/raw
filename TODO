@@ -1,3 +1,9 @@
-Call Route data from MapMyFitness
-Upsert Route data to MongoDB MapMyFitness collection
-
+Strava pageination 
+Refresh token for both ua and strava
+refactor raw database 
+- strava
+    - activities
+    - tokens
+- underarmour
+    - routes
+    - tokens

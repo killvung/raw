@@ -16,4 +16,11 @@ export class UnderArmourController {
         const { upsertedCount, modifiedCount } = await this.underarmourService.upsertRoutes(routes);
         return { upsertedCount, modifiedCount }
     }
+
+    @Post("/sync/workouts")
+    async syncMapMyFitnessWorkouts() {
+        const workouts = await this.underarmourService.getWorkouts();
+        const { upsertedCount, modifiedCount } = await this.underarmourService.upsertWorkouts(workouts);
+        return { upsertedCount, modifiedCount }
+    }
 }
