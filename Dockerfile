@@ -18,7 +18,9 @@ ENV NODE_ENV=${NODE_ENV}
 
 WORKDIR /usr/src/app
 
-COPY --from=development . .
+COPY . .
+
+COPY --from=development /usr/src/app/dist ./dist
 
 RUN npm prune --production
 
