@@ -1,6 +1,6 @@
-# Rerun Raw
+# Rerun Origin
 
-A service to ingest raw data from 3rd party fitness service for my Rerun system
+A service to ingest origin data from 3rd party fitness services to my Rerun system
 
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
